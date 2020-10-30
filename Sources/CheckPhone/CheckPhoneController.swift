@@ -12,6 +12,9 @@ import FirebaseAuth
 ///
 /// based on https://firebase.google.com/docs/auth/ios/phone-auth
 class CheckPhoneController: UIViewController {
+    static func create() -> CheckPhoneController {
+        return Bundle.module.loadNibNamed("CheckPhoneController", owner: nil, options: nil)?.first as! CheckPhoneController
+    }
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var checkLabel: UILabel!
     @IBOutlet weak var receiveLabel: UILabel!
