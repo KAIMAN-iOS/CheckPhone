@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Check Phone Controller-->
+        <scene sceneID="M0g-j0-BNF">
+            <objects>
+                <viewController storyboardIdentifier="CheckPhoneController" id="Csj-wP-Mbz" customClass="CheckPhoneController" customModule="CheckPhone" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PKl-Eb-Rmm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="vmo-md-vIB">
+                                <rect key="frame" x="20" y="52" width="374" height="114.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify Phone Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9vr-gI-Led">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check your SMS messages. We've sent you the PIN at 098986978689" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dw6-eL-ggX">
+                                        <rect key="frame" x="0.0" y="72" width="374" height="42.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TB8-LZ-Ury" customClass="KAPinField" customModule="CheckPhone">
+                                <rect key="frame" x="20" y="197" width="374" height="92"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="cPO-mB-jx9"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fmL-82-yle">
+                                <rect key="frame" x="20" y="302" width="374" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="900" text="Didn't receive the SMS ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6G-V4-RWt">
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="900" verticalHuggingPriority="248" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSP-78-WcD">
+                                        <rect key="frame" x="282" y="0.0" width="92" height="30"/>
+                                        <state key="normal" title="Resend Code">
+                                            <color key="titleColor" red="0.81912494020000004" green="0.22304135889999999" blue="0.0095076975099999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resendCode" destination="Csj-wP-Mbz" eventType="touchUpInside" id="Jc0-fW-ppM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsz-XT-8p1" customClass="ActionButton" customModule="ActionButton">
+                                <rect key="frame" x="20" y="351" width="374" height="51"/>
+                                <color key="backgroundColor" red="0.81912494020000004" green="0.22304135889999999" blue="0.0095076975099999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="51" id="mSb-JO-dNS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
+                                <state key="normal" title="VERIFY">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkCode" destination="Csj-wP-Mbz" eventType="touchUpInside" id="7Mp-cf-yhf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDO-iB-7HS"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vmo-md-vIB" firstAttribute="leading" secondItem="vDO-iB-7HS" secondAttribute="leading" constant="20" id="0T4-3r-w2S"/>
+                            <constraint firstAttribute="trailing" secondItem="vmo-md-vIB" secondAttribute="trailing" constant="20" id="1xi-r8-usC"/>
+                            <constraint firstItem="TB8-LZ-Ury" firstAttribute="top" secondItem="vmo-md-vIB" secondAttribute="bottom" constant="30.5" id="3EE-vy-QHr"/>
+                            <constraint firstItem="vDO-iB-7HS" firstAttribute="trailing" secondItem="Xsz-XT-8p1" secondAttribute="trailing" constant="20" id="5t9-Oh-C6C"/>
+                            <constraint firstItem="vDO-iB-7HS" firstAttribute="trailing" secondItem="TB8-LZ-Ury" secondAttribute="trailing" constant="20" id="7l4-le-QMS"/>
+                            <constraint firstItem="Xsz-XT-8p1" firstAttribute="leading" secondItem="vDO-iB-7HS" secondAttribute="leading" constant="20" id="Lrn-wB-qFR"/>
+                            <constraint firstItem="vDO-iB-7HS" firstAttribute="trailing" secondItem="fmL-82-yle" secondAttribute="trailing" constant="20" id="Nf6-CV-7zT"/>
+                            <constraint firstItem="Xsz-XT-8p1" firstAttribute="top" secondItem="fmL-82-yle" secondAttribute="bottom" constant="19" id="URo-cU-XAo"/>
+                            <constraint firstItem="fmL-82-yle" firstAttribute="leading" secondItem="vDO-iB-7HS" secondAttribute="leading" constant="20" id="Ubk-Cm-6lZ"/>
+                            <constraint firstItem="fmL-82-yle" firstAttribute="top" secondItem="TB8-LZ-Ury" secondAttribute="bottom" constant="13" id="XAe-Rx-0n9"/>
+                            <constraint firstItem="TB8-LZ-Ury" firstAttribute="leading" secondItem="vDO-iB-7HS" secondAttribute="leading" constant="20" id="rY3-9F-81u"/>
+                            <constraint firstItem="vmo-md-vIB" firstAttribute="top" secondItem="vDO-iB-7HS" secondAttribute="top" constant="8" id="xWU-8m-MWD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="checkButton" destination="Xsz-XT-8p1" id="Hi0-Cq-6Tt"/>
+                        <outlet property="checkLabel" destination="Dw6-eL-ggX" id="jny-X2-v8Z"/>
+                        <outlet property="pinCodeView" destination="TB8-LZ-Ury" id="RYt-xl-qpt"/>
+                        <outlet property="receiveLabel" destination="m6G-V4-RWt" id="owV-me-c36"/>
+                        <outlet property="receiveStackView" destination="vmo-md-vIB" id="KDp-oN-2ny"/>
+                        <outlet property="resendButton" destination="fSP-78-WcD" id="9w0-IX-GLL"/>
+                        <outlet property="titleLabel" destination="9vr-gI-Led" id="qT8-Ah-q6h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IDC-r7-uAQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="173"/>
+        </scene>
+    </scenes>
+</document>

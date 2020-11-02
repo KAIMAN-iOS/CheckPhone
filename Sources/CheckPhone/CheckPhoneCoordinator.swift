@@ -8,14 +8,21 @@
 import UIKit
 import KCoordinatorKit
 
-class CheckPhoneCoordinator<DeepLinkType>: Coordinator<DeepLinkType> {
-    let checkController: CheckPhoneController = CheckPhoneController.create()
-    init(router: RouterType, phone: String) {
+public class CheckPhoneCoordinator<DeepLinkType>: Coordinator<DeepLinkType> {
+    public let checkController: CheckPhoneController = CheckPhoneController.create()
+    public init(router: RouterType, phone: String) {
         super.init(router: router)
         checkController.phoneNumber = phone
     }
     
-    override func toPresentable() -> UIViewController {
+    public override func toPresentable() -> UIViewController {
         checkController
     }
 }
+
+extension String {
+    func bundleLocale() -> String {
+        NSLocalizedString(self, bundle: .module, comment: self)
+    }
+}
+

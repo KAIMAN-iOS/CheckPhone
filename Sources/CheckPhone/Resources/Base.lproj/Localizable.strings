@@ -1,0 +1,6 @@
+"Check number title" = "Verify Phone Number";
+"Check number message format" = "Check your SMS messages. We've sent you the PIN at %@";
+"didn't receive code" = "Didn't receive the SMS ?";
+"Resend code" = "Resend Code";
+"check" = "VERIFY";
+"sending code" = "sending code…";
