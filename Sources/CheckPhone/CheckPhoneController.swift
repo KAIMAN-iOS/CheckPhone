@@ -10,7 +10,6 @@ import FirebaseAuth
 import LabelExtension
 import FontExtension
 import ActionButton
-import BaseController
 
 public enum CheckCodeError: Error {
     case verificationCodeMissing
