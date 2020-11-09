@@ -75,6 +75,10 @@ public class CheckPhoneController: UIViewController {
         }
     }
     
+    deinit {
+        print("💀 DEINIT \(URL(fileURLWithPath: #file).lastPathComponent)")
+    }
+    
     public func resetButtonState() {
         checkButton.isLoading = false
     }

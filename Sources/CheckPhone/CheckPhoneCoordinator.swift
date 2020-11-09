@@ -15,6 +15,10 @@ public class CheckPhoneCoordinator<DeepLinkType>: Coordinator<DeepLinkType> {
         checkController.phoneNumber = phone
     }
     
+    deinit {
+        print("💀 DEINIT \(URL(fileURLWithPath: #file).lastPathComponent)")
+    }
+    
     public override func toPresentable() -> UIViewController {
         checkController
     }
