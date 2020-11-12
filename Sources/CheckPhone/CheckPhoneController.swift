@@ -72,6 +72,7 @@ public class CheckPhoneController: UIViewController {
         didSet {
             checkButton.shape = .rounded(value: 5.0)
             checkButton.actionButtonType = .primary
+            checkButton.setTitle("check".bundleLocale(), for: .normal)
         }
     }
     
