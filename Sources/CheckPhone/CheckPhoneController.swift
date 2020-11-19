@@ -56,6 +56,7 @@ public class CheckPhoneController: UIViewController {
     /// see configureDefaultPinCode() for an axample of options
     public var pinFieldSetUpCompletion: ((KAPinField) -> Void)? = nil
     public var verifyCompletion: ((Result<Bool, Error>) -> Void)? = nil
+    public var selectTextFieldOnSendComplete: Bool = true
     
     /**
      the phone number to send the code to
@@ -134,6 +135,10 @@ public class CheckPhoneController: UIViewController {
             self?.checkLabel.set(text: String(format: "Check number message format".bundleLocale(), phoneNumber), for: FontType.default, textColor: CheckPhoneController.configuration.palette.mainTexts)
             loader.removeFromSuperview()
             self?.receiveStackView.removeArrangedSubview(loader)
+            
+            if self?.selectTextFieldOnSendComplete ?? false {
+                self?.pinCodeView.becomeFirstResponder()
+            }
         }
     }
     
