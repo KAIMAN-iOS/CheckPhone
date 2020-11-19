@@ -10,6 +10,7 @@ import FirebaseAuth
 import LabelExtension
 import FontExtension
 import ActionButton
+import ATAConfiguration
 
 public enum CheckCodeError: Error {
     case verificationCodeMissing
@@ -20,24 +21,26 @@ public enum CheckCodeError: Error {
 ///
 /// based on https://firebase.google.com/docs/auth/ios/phone-auth
 public class CheckPhoneController: UIViewController {
-    static func create() -> CheckPhoneController {
+    static var configuration: ATAConfiguration!
+    static func create(conf: ATAConfiguration) -> CheckPhoneController {
+        CheckPhoneController.configuration = conf
         return UIStoryboard(name: "CheckPhone", bundle: .module).instantiateViewController(withIdentifier: "CheckPhoneController") as! CheckPhoneController
     }
     @IBOutlet weak var titleLabel: UILabel!  {
         didSet {
-            titleLabel.set(text: "Check number title".bundleLocale(), for: FontType.bigTitle, textColor: #colorLiteral(red: 0.1234303191, green: 0.1703599989, blue: 0.2791167498, alpha: 1))
+            titleLabel.set(text: "Check number title".bundleLocale(), for: FontType.bigTitle, textColor: CheckPhoneController.configuration.palette.mainTexts)
         }
     }
 
     @IBOutlet weak var checkLabel: UILabel!  {
         didSet {
-            checkLabel.set(text: String(format: "Check number message format", phoneNumber).bundleLocale(), for: FontType.default, textColor: #colorLiteral(red: 0.1234303191, green: 0.1703599989, blue: 0.2791167498, alpha: 1))
+            checkLabel.set(text: String(format: "Check number message format", phoneNumber).bundleLocale(), for: FontType.default, textColor: CheckPhoneController.configuration.palette.mainTexts)
         }
     }
 
     @IBOutlet weak var receiveLabel: UILabel!  {
         didSet {
-            receiveLabel.set(text: "didn't receive code".bundleLocale(), for: FontType.default, textColor: #colorLiteral(red: 0.1234303191, green: 0.1703599989, blue: 0.2791167498, alpha: 1))
+            receiveLabel.set(text: "didn't receive code".bundleLocale(), for: FontType.default, textColor: CheckPhoneController.configuration.palette.mainTexts)
         }
     }
     
@@ -64,7 +67,7 @@ public class CheckPhoneController: UIViewController {
     @IBOutlet weak var resendButton: UIButton!  {
         didSet {
             resendButton.setTitle("Resend code".bundleLocale(), for: .normal)
-            resendButton.setTitleColor(#colorLiteral(red: 1, green: 0.192286253, blue: 0.2298730612, alpha: 1), for: .normal)
+            resendButton.setTitleColor(CheckPhoneController.configuration.palette.primary, for: .normal)
         }
     }
 
@@ -120,15 +123,15 @@ public class CheckPhoneController: UIViewController {
     }
     
     @IBAction func resendCode() {
-        checkLabel.set(text: "sending code".bundleLocale(), for: FontType.default, textColor: #colorLiteral(red: 0.1234303191, green: 0.1703599989, blue: 0.2791167498, alpha: 1))
-        let loader = UIActivityIndicatorView(style: .white)
-        loader.color = #colorLiteral(red: 1, green: 0.192286253, blue: 0.2298730612, alpha: 1)
+        checkLabel.set(text: "sending code".bundleLocale(), for: FontType.default, textColor: CheckPhoneController.configuration.palette.mainTexts)
+        let loader = UIActivityIndicatorView(style: .medium)
+        loader.color = CheckPhoneController.configuration.palette.primary
         receiveStackView.addArrangedSubview(loader)
         loader.startAnimating()
         
         PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { [weak self, phoneNumber] (verificationId, error) in
             self?.verificationId = verificationId
-            self?.checkLabel.set(text: String(format: "Check number message format".bundleLocale(), phoneNumber), for: FontType.default, textColor: #colorLiteral(red: 0.1234303191, green: 0.1703599989, blue: 0.2791167498, alpha: 1))
+            self?.checkLabel.set(text: String(format: "Check number message format".bundleLocale(), phoneNumber), for: FontType.default, textColor: CheckPhoneController.configuration.palette.mainTexts)
             loader.removeFromSuperview()
             self?.receiveStackView.removeArrangedSubview(loader)
         }
@@ -141,20 +144,28 @@ public class CheckPhoneController: UIViewController {
     
     private (set) var verificationId: String?
     public override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        ActionButton.globalShape = .rounded(value: 10.0)
+        ActionButton.primaryColor = CheckPhoneController.configuration.palette.primary
+        ActionButton.separatorColor = CheckPhoneController.configuration.palette.placeholder
+        ActionButton.mainTextsColor = CheckPhoneController.configuration.palette.mainTexts
+        ActionButton.loadingColor = CheckPhoneController.configuration.palette.primary.withAlphaComponent(0.7)
+        
         pinFieldSetUpCompletion?(pinCodeView)
         guard phoneNumber.count > 0 else {
             fatalError("A phone number must be set in order to use CheckPhone")
         }
         resendCode()
-        checkLabel.set(text: String(format: "Check number message format".bundleLocale(), phoneNumber), for: FontType.default, textColor: #colorLiteral(red: 0.1234303191, green: 0.1703599989, blue: 0.2791167498, alpha: 1))
+        checkLabel.set(text: String(format: "Check number message format".bundleLocale(), phoneNumber), for: FontType.default, textColor: CheckPhoneController.configuration.palette.mainTexts)
     }
     
     private func configureDefaultPinCode() {
         pinCodeView.properties.numberOfCharacters = 6
         // appearance
-        pinCodeView.appearance.textColor = #colorLiteral(red: 0.1234303191, green: 0.1703599989, blue: 0.2791167498, alpha: 1)
-        pinCodeView.appearance.tokenColor = #colorLiteral(red: 0.6176490188, green: 0.6521512866, blue: 0.7114837766, alpha: 1)
-        pinCodeView.appearance.tokenFocusColor = #colorLiteral(red: 1, green: 0.192286253, blue: 0.2298730612, alpha: 1)
+        pinCodeView.appearance.textColor = CheckPhoneController.configuration.palette.mainTexts
+        pinCodeView.appearance.tokenColor = CheckPhoneController.configuration.palette.inactive
+        pinCodeView.appearance.tokenFocusColor = CheckPhoneController.configuration.palette.primary
         pinCodeView.appearance.keyboardType = UIKeyboardType.numberPad // Specify keyboard type
     }
 }

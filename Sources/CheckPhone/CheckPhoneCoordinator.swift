@@ -7,11 +7,13 @@
 
 import UIKit
 import KCoordinatorKit
+import ATAConfiguration
 
 public class CheckPhoneCoordinator<DeepLinkType>: Coordinator<DeepLinkType> {
-    public let checkController: CheckPhoneController = CheckPhoneController.create()
-    public init(router: RouterType, phone: String) {
+    public var checkController: CheckPhoneController!
+    public init(router: RouterType, phone: String, conf: ATAConfiguration) {
         super.init(router: router)
+        checkController = CheckPhoneController.create(conf: conf)
         checkController.phoneNumber = phone
     }
     
