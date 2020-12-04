@@ -28,19 +28,19 @@ public class CheckPhoneController: UIViewController {
     }
     @IBOutlet weak var titleLabel: UILabel!  {
         didSet {
-            titleLabel.set(text: "Check number title".bundleLocale(), for: FontType.bigTitle, textColor: CheckPhoneController.configuration.palette.mainTexts)
+            titleLabel.set(text: "Check number title".bundleLocale(), for: .largeTitle, textColor: CheckPhoneController.configuration.palette.mainTexts)
         }
     }
 
     @IBOutlet weak var checkLabel: UILabel!  {
         didSet {
-            checkLabel.set(text: String(format: "Check number message format", phoneNumber).bundleLocale(), for: FontType.default, textColor: CheckPhoneController.configuration.palette.mainTexts)
+            checkLabel.set(text: String(format: "Check number message format", phoneNumber).bundleLocale(), for: .body, textColor: CheckPhoneController.configuration.palette.mainTexts)
         }
     }
 
     @IBOutlet weak var receiveLabel: UILabel!  {
         didSet {
-            receiveLabel.set(text: "didn't receive code".bundleLocale(), for: FontType.default, textColor: CheckPhoneController.configuration.palette.mainTexts)
+            receiveLabel.set(text: "didn't receive code".bundleLocale(), for: .body, textColor: CheckPhoneController.configuration.palette.mainTexts)
         }
     }
     
@@ -124,7 +124,7 @@ public class CheckPhoneController: UIViewController {
     }
     
     @IBAction func resendCode() {
-        checkLabel.set(text: "sending code".bundleLocale(), for: FontType.default, textColor: CheckPhoneController.configuration.palette.mainTexts)
+        checkLabel.set(text: "sending code".bundleLocale(), for: .body, textColor: CheckPhoneController.configuration.palette.mainTexts)
         let loader = UIActivityIndicatorView(style: .medium)
         loader.color = CheckPhoneController.configuration.palette.primary
         receiveStackView.addArrangedSubview(loader)
@@ -132,7 +132,7 @@ public class CheckPhoneController: UIViewController {
         
         PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { [weak self, phoneNumber] (verificationId, error) in
             self?.verificationId = verificationId
-            self?.checkLabel.set(text: String(format: "Check number message format".bundleLocale(), phoneNumber), for: FontType.default, textColor: CheckPhoneController.configuration.palette.mainTexts)
+            self?.checkLabel.set(text: String(format: "Check number message format".bundleLocale(), phoneNumber), for: .body, textColor: CheckPhoneController.configuration.palette.mainTexts)
             loader.removeFromSuperview()
             self?.receiveStackView.removeArrangedSubview(loader)
             
@@ -162,7 +162,7 @@ public class CheckPhoneController: UIViewController {
             fatalError("A phone number must be set in order to use CheckPhone")
         }
         resendCode()
-        checkLabel.set(text: String(format: "Check number message format".bundleLocale(), phoneNumber), for: FontType.default, textColor: CheckPhoneController.configuration.palette.mainTexts)
+        checkLabel.set(text: String(format: "Check number message format".bundleLocale(), phoneNumber), for: .body, textColor: CheckPhoneController.configuration.palette.mainTexts)
     }
     
     private func configureDefaultPinCode() {
