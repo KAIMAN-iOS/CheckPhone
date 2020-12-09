@@ -151,12 +151,6 @@ public class CheckPhoneController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        ActionButton.globalShape = .rounded(value: 5.0)
-        ActionButton.primaryColor = CheckPhoneController.configuration.palette.primary
-        ActionButton.separatorColor = CheckPhoneController.configuration.palette.placeholder
-        ActionButton.mainTextsColor = CheckPhoneController.configuration.palette.mainTexts
-        ActionButton.loadingColor = CheckPhoneController.configuration.palette.primary.withAlphaComponent(0.7)
-        
         pinFieldSetUpCompletion?(pinCodeView)
         guard phoneNumber.count > 0 else {
             fatalError("A phone number must be set in order to use CheckPhone")
