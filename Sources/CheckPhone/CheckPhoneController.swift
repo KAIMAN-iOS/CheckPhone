@@ -145,6 +145,8 @@ public class CheckPhoneController: UIViewController {
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false )
+        navigationController?.navigationBar.prefersLargeTitles = false
+        title = nil
     }
     
     private (set) var verificationId: String?
