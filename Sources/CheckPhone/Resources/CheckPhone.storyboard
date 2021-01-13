@@ -18,16 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="vmo-md-vIB">
-                                <rect key="frame" x="20" y="52" width="374" height="114.5"/>
+                                <rect key="frame" x="20" y="52" width="374" height="42.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify Phone Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9vr-gI-Led">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check your SMS messages. We've sent you the PIN at 098986978689" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dw6-eL-ggX">
-                                        <rect key="frame" x="0.0" y="72" width="374" height="42.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="42.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -35,14 +29,14 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TB8-LZ-Ury" customClass="KAPinField" customModule="CheckPhone">
-                                <rect key="frame" x="20" y="197" width="374" height="92"/>
+                                <rect key="frame" x="20" y="125" width="374" height="92"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="92" id="cPO-mB-jx9"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fmL-82-yle">
-                                <rect key="frame" x="20" y="302" width="374" height="25"/>
+                                <rect key="frame" x="20" y="230" width="374" height="25"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="900" text="Didn't receive the SMS ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6G-V4-RWt">
                                         <rect key="frame" x="0.0" y="4.5" width="274" height="20.5"/>
@@ -62,7 +56,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsz-XT-8p1" customClass="ActionButton" customModule="ActionButton">
-                                <rect key="frame" x="20" y="346" width="374" height="51"/>
+                                <rect key="frame" x="20" y="274" width="374" height="51"/>
                                 <color key="backgroundColor" red="0.81912494020000004" green="0.22304135889999999" blue="0.0095076975099999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="51" id="mSb-JO-dNS"/>
@@ -101,7 +95,6 @@
                         <outlet property="receiveLabel" destination="m6G-V4-RWt" id="owV-me-c36"/>
                         <outlet property="receiveStackView" destination="vmo-md-vIB" id="KDp-oN-2ny"/>
                         <outlet property="resendButton" destination="fSP-78-WcD" id="9w0-IX-GLL"/>
-                        <outlet property="titleLabel" destination="9vr-gI-Led" id="qT8-Ah-q6h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IDC-r7-uAQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -26,11 +26,6 @@ public class CheckPhoneController: UIViewController {
         CheckPhoneController.configuration = conf
         return UIStoryboard(name: "CheckPhone", bundle: .module).instantiateViewController(withIdentifier: "CheckPhoneController") as! CheckPhoneController
     }
-    @IBOutlet weak var titleLabel: UILabel!  {
-        didSet {
-            titleLabel.set(text: "Check number title".bundleLocale(), for: .largeTitle, textColor: CheckPhoneController.configuration.palette.mainTexts)
-        }
-    }
 
     @IBOutlet weak var checkLabel: UILabel!  {
         didSet {
@@ -142,16 +137,11 @@ public class CheckPhoneController: UIViewController {
         }
     }
     
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: false )
-        navigationController?.navigationBar.prefersLargeTitles = false
-        title = nil
-    }
-    
     private (set) var verificationId: String?
     public override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Check number title".bundleLocale()
         
         pinFieldSetUpCompletion?(pinCodeView)
         guard phoneNumber.count > 0 else {
