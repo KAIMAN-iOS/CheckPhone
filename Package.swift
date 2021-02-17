@@ -35,6 +35,7 @@ let package = Package(
             dependencies: [.product(name: "FirebaseAuth", package: "Firebase"),
                            .product(name: "FirebaseAnalytics", package: "Firebase"),
                            .product(name: "FirebaseFirestore", package: "Firebase"),
+                           .product(name: "FirebaseStorage", package: "Firebase"),
                            "KCoordinatorKit",
                            "ActionButton",
                            "ATAConfiguration"])
