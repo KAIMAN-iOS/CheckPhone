@@ -14,9 +14,18 @@
         "package": "ActionButton",
         "repositoryURL": "https://github.com/jerometonnelier/ActionButton",
         "state": {
+          "branch": "master",
+          "revision": "d3d27b14d00446b435c84664211d0f4f5155c5f8",
+          "version": null
+        }
+      },
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire",
+        "state": {
           "branch": null,
-          "revision": "3ae3d2b60324051f8ee9cb0ab63feb5866ef454c",
-          "version": "1.0.3"
+          "revision": "eaf6e622dd41b07b251d8f01752eab31bc811493",
+          "version": "5.4.1"
         }
       },
       {
@@ -32,9 +41,9 @@
         "package": "ATAConfiguration",
         "repositoryURL": "https://github.com/jerometonnelier/ATAConfiguration",
         "state": {
-          "branch": null,
-          "revision": "8ec9be62f1f5783ce0acb71ff1cb885ca8265df2",
-          "version": "1.0.3"
+          "branch": "master",
+          "revision": "0c1bb6372ec4b9fca70ea96d406cfe958fd786fc",
+          "version": null
         }
       },
       {
@@ -104,18 +113,27 @@
         "package": "KCoordinatorKit",
         "repositoryURL": "https://github.com/jerometonnelier/KCoordinatorKit",
         "state": {
-          "branch": null,
+          "branch": "master",
           "revision": "20bb96f4f55c366fbeba61e97287bd6ee4a14d03",
-          "version": "1.0.1"
+          "version": null
         }
       },
       {
         "package": "KExtensions",
         "repositoryURL": "https://github.com/jerometonnelier/KExtensions",
         "state": {
+          "branch": "master",
+          "revision": "e63748482c3ea6cda875559a600ee0047ba733ef",
+          "version": null
+        }
+      },
+      {
+        "package": "KStorage",
+        "repositoryURL": "https://github.com/jerometonnelier/KStorage",
+        "state": {
           "branch": null,
-          "revision": "8e29ed4a1b0ee56f1bd7f858acb1b88bd7d5c810",
-          "version": "1.0.20"
+          "revision": "330de84d7b9601468a842c099c7627069ab92016",
+          "version": "1.0.0"
         }
       },
       {
@@ -152,6 +170,15 @@
           "branch": null,
           "revision": "ef122e4512e84020dca9d8f598408fdb38658946",
           "version": "9.2.0"
+        }
+      },
+      {
+        "package": "PromiseKit",
+        "repositoryURL": "https://github.com/mxcl/PromiseKit",
+        "state": {
+          "branch": null,
+          "revision": "aea48ea1855f5d82e2dffa6027afce3aab8f3dd7",
+          "version": "6.13.3"
         }
       },
       {

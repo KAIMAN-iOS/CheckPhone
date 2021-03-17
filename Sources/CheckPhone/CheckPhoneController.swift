@@ -101,21 +101,22 @@ public class CheckPhoneController: UIViewController {
         Auth
             .auth()
             .signIn(with: credential) { [weak self] (authResult, error) in
-            guard error == nil else {
-                if let authError = error,
-                   let errCode = AuthErrorCode(rawValue: authError._code) {
-                    switch errCode {
-                    case .invalidVerificationCode: self?.verifyCompletion?(.failure(CheckCodeError.invalidVerificationCode))
-                    default: self?.verifyCompletion?(.failure(error!))
-                    }
-                } else {
-                    self?.verifyCompletion?(.failure(error!))
-                }
                 self?.resetButtonState()
-                return
+                
+                guard error == nil else {
+                    if let authError = error,
+                       let errCode = AuthErrorCode(rawValue: authError._code) {
+                        switch errCode {
+                        case .invalidVerificationCode: self?.verifyCompletion?(.failure(CheckCodeError.invalidVerificationCode))
+                        default: self?.verifyCompletion?(.failure(error!))
+                        }
+                    } else {
+                        self?.verifyCompletion?(.failure(error!))
+                    }
+                    return
+                }
+                self?.verifyCompletion?(.success(true))
             }
-            self?.verifyCompletion?(.success(true))
-        }
     }
     
     @IBAction func resendCode() {
