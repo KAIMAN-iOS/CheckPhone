@@ -141,6 +141,7 @@ public class CheckPhoneController: UIViewController {
     private (set) var verificationId: String?
     public override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = CheckPhoneController.configuration.palette.background
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Check number title".bundleLocale()
         
