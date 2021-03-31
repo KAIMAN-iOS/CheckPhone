@@ -11,6 +11,7 @@ import LabelExtension
 import FontExtension
 import ActionButton
 import ATAConfiguration
+import UIViewControllerExtension
 
 public enum CheckCodeError: Error {
     case verificationCodeMissing
@@ -141,6 +142,7 @@ public class CheckPhoneController: UIViewController {
     private (set) var verificationId: String?
     public override func viewDidLoad() {
         super.viewDidLoad()
+        hideBackButtonText = true
         view.backgroundColor = CheckPhoneController.configuration.palette.background
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Check number title".bundleLocale()
