@@ -121,6 +121,7 @@ public class CheckPhoneController: UIViewController {
     }
     
     @IBAction func resendCode() {
+        pinCodeView.text = nil
         checkLabel.set(text: "sending code".bundleLocale(), for: .body, textColor: CheckPhoneController.configuration.palette.mainTexts)
         let loader = UIActivityIndicatorView(style: .medium)
         loader.color = CheckPhoneController.configuration.palette.primary
