@@ -85,6 +85,7 @@ public class CheckPhoneController: UIViewController {
     }
     
     @IBAction func checkCode() {
+        view.endEditing(true)
         guard let code = pinCodeView.text,
               let id = verificationId else {
             verifyCompletion?(Result.failure(CheckCodeError.verificationCodeMissing))
