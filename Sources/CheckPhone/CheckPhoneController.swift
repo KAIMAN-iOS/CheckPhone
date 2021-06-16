@@ -22,6 +22,7 @@ public enum CheckCodeError: Error {
 ///
 /// based on https://firebase.google.com/docs/auth/ios/phone-auth
 public class CheckPhoneController: UIViewController {
+    var closeDelegate: CloseDelegate!
     static var configuration: ATAConfiguration!
     static func create(conf: ATAConfiguration) -> CheckPhoneController {
         CheckPhoneController.configuration = conf
