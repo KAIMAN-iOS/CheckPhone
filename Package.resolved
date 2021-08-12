@@ -6,16 +6,16 @@
         "repositoryURL": "https://github.com/firebase/abseil-cpp-SwiftPM.git",
         "state": {
           "branch": null,
-          "revision": "05d8107f2971a37e6c77245b7c4c6b0a7e97bc99",
-          "version": "0.20200225.0"
+          "revision": "fffc3c2729be5747390ad02d5100291a0d9ad26a",
+          "version": "0.20200225.4"
         }
       },
       {
         "package": "ActionButton",
-        "repositoryURL": "https://github.com/jerometonnelier/ActionButton",
+        "repositoryURL": "https://github.com/KAIMAN-iOS/ActionButton",
         "state": {
           "branch": "master",
-          "revision": "d3d27b14d00446b435c84664211d0f4f5155c5f8",
+          "revision": "5a8f4d4969719e1f32758af9f61777562ba262e7",
           "version": null
         }
       },
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/Alamofire/Alamofire",
         "state": {
           "branch": null,
-          "revision": "eaf6e622dd41b07b251d8f01752eab31bc811493",
-          "version": "5.4.1"
+          "revision": "f96b619bcb2383b43d898402283924b80e2c4bae",
+          "version": "5.4.3"
         }
       },
       {
@@ -39,10 +39,10 @@
       },
       {
         "package": "ATAConfiguration",
-        "repositoryURL": "https://github.com/jerometonnelier/ATAConfiguration",
+        "repositoryURL": "https://github.com/KAIMAN-iOS/ATAConfiguration",
         "state": {
           "branch": "master",
-          "revision": "0c1bb6372ec4b9fca70ea96d406cfe958fd786fc",
+          "revision": "bee5d53f06f15f9a7c036bc7ed29e504eb230c35",
           "version": null
         }
       },
@@ -51,8 +51,8 @@
         "repositoryURL": "https://github.com/firebase/boringssl-SwiftPM.git",
         "state": {
           "branch": null,
-          "revision": "7bcafa2660bc58715c39637494550d1ed7cd7229",
-          "version": "0.0.7"
+          "revision": "734a8247442fde37df4364c21f6a0085b6a36728",
+          "version": "0.7.2"
         }
       },
       {
@@ -60,8 +60,8 @@
         "repositoryURL": "https://github.com/firebase/firebase-ios-sdk.git",
         "state": {
           "branch": null,
-          "revision": "14dff7e19375288c7e34df8444c85d314f26d7cf",
-          "version": "7.6.0"
+          "revision": "b8e974d8863536e93c1dd3ea65477a65d671847e",
+          "version": "8.5.0"
         }
       },
       {
@@ -69,8 +69,8 @@
         "repositoryURL": "https://github.com/google/GoogleAppMeasurement.git",
         "state": {
           "branch": null,
-          "revision": "38205d8e39f806f71b048f93427337c9511c9402",
-          "version": "7.5.1"
+          "revision": "06e74ef7ee7326e1af724d462091eed1e5c6fb4a",
+          "version": "8.3.1"
         }
       },
       {
@@ -78,8 +78,8 @@
         "repositoryURL": "https://github.com/google/GoogleDataTransport.git",
         "state": {
           "branch": null,
-          "revision": "2e8a342494d20fcf209b61a45cddc1668b5ccc6d",
-          "version": "8.2.0"
+          "revision": "9e79fd8deddbef5646fbb5dbb3eaf963e338f007",
+          "version": "9.1.0"
         }
       },
       {
@@ -87,8 +87,8 @@
         "repositoryURL": "https://github.com/google/GoogleUtilities.git",
         "state": {
           "branch": null,
-          "revision": "2c7d33099a3c3da1139bb1e8eb94e46e0dacf075",
-          "version": "7.2.2"
+          "revision": "beb713a16b50a4df3162b3f3ecdeffa16b74b773",
+          "version": "7.5.0"
         }
       },
       {
@@ -96,8 +96,8 @@
         "repositoryURL": "https://github.com/firebase/grpc-SwiftPM.git",
         "state": {
           "branch": null,
-          "revision": "91b62619e6c83bc5f1b99d9d60fe46b2862d3a5a",
-          "version": "1.28.2"
+          "revision": "fb405dd2c7901485f7e158b24e3a0a47e4efd8b5",
+          "version": "1.28.4"
         }
       },
       {
@@ -105,13 +105,22 @@
         "repositoryURL": "https://github.com/google/gtm-session-fetcher.git",
         "state": {
           "branch": null,
-          "revision": "91ed3d188eb95705fef3c249453b81f32dc557d1",
-          "version": "1.5.0"
+          "revision": "424886f9336a71891aa81852d0c2c08d807d21aa",
+          "version": "1.6.1"
+        }
+      },
+      {
+        "package": "Haptica",
+        "repositoryURL": "https://github.com/efremidze/Haptica",
+        "state": {
+          "branch": "master",
+          "revision": "4084702c85102c2d17d58e42ec5a750094944864",
+          "version": null
         }
       },
       {
         "package": "KCoordinatorKit",
-        "repositoryURL": "https://github.com/jerometonnelier/KCoordinatorKit",
+        "repositoryURL": "https://github.com/KAIMAN-iOS/KCoordinatorKit",
         "state": {
           "branch": "master",
           "revision": "20bb96f4f55c366fbeba61e97287bd6ee4a14d03",
@@ -120,10 +129,10 @@
       },
       {
         "package": "KExtensions",
-        "repositoryURL": "https://github.com/jerometonnelier/KExtensions",
+        "repositoryURL": "https://github.com/KAIMAN-iOS/KExtensions",
         "state": {
           "branch": "master",
-          "revision": "e63748482c3ea6cda875559a600ee0047ba733ef",
+          "revision": "4ff83a59c9e51088fd32804f493cd08f1e4b2b7d",
           "version": null
         }
       },
@@ -141,8 +150,8 @@
         "repositoryURL": "https://github.com/firebase/leveldb.git",
         "state": {
           "branch": null,
-          "revision": "fa1f25f296a766e5a789c4dacd4798dea798b2c2",
-          "version": "1.22.1"
+          "revision": "0706abcc6b0bd9cedfbb015ba840e4a780b5159b",
+          "version": "1.22.2"
         }
       },
       {
@@ -150,8 +159,8 @@
         "repositoryURL": "https://github.com/firebase/nanopb.git",
         "state": {
           "branch": null,
-          "revision": "c2d43e59d8ec880ed261366818f0cacc5c8cc2e6",
-          "version": "2.30907.0"
+          "revision": "7ee9ef9f627d85cbe1b8c4f49a3ed26eed216c77",
+          "version": "2.30908.0"
         }
       },
       {
@@ -159,8 +168,8 @@
         "repositoryURL": "https://github.com/ethanhuang13/NSAttributedStringBuilder",
         "state": {
           "branch": null,
-          "revision": "4a3b02b8b4baf531490e1ddae8ed4a667bdb12b5",
-          "version": "0.3.3"
+          "revision": "18662b33975c9ec8c80a1bd9b4e30d09612ee7ee",
+          "version": "0.4.1"
         }
       },
       {
@@ -168,8 +177,17 @@
         "repositoryURL": "https://github.com/kean/Nuke",
         "state": {
           "branch": null,
-          "revision": "ef122e4512e84020dca9d8f598408fdb38658946",
-          "version": "9.2.0"
+          "revision": "7f73ceaeacd5df75a7994cd82e165ad9ff1815db",
+          "version": "9.6.1"
+        }
+      },
+      {
+        "package": "Peep",
+        "repositoryURL": "https://github.com/efremidze/Peep",
+        "state": {
+          "branch": null,
+          "revision": "6ba6217b6fa53d53e635f20ed225261398b32116",
+          "version": "3.0.0"
         }
       },
       {
@@ -177,8 +195,8 @@
         "repositoryURL": "https://github.com/mxcl/PromiseKit",
         "state": {
           "branch": null,
-          "revision": "aea48ea1855f5d82e2dffa6027afce3aab8f3dd7",
-          "version": "6.13.3"
+          "revision": "d2f7ba14bcdc45e18f4f60ad9df883fb9055f081",
+          "version": "6.15.3"
         }
       },
       {
@@ -186,8 +204,8 @@
         "repositoryURL": "https://github.com/google/promises.git",
         "state": {
           "branch": null,
-          "revision": "d8accebc8fa32f57196df191e733f946e955c549",
-          "version": "1.2.11"
+          "revision": "611337c330350c9c1823ad6d671e7f936af5ee13",
+          "version": "2.0.0"
         }
       },
       {
@@ -197,6 +215,15 @@
           "branch": null,
           "revision": "d458564516e5676af9c70b4f4b2a9178294f1bc6",
           "version": "5.0.1"
+        }
+      },
+      {
+        "package": "SwiftProtobuf",
+        "repositoryURL": "https://github.com/apple/swift-protobuf.git",
+        "state": {
+          "branch": null,
+          "revision": "1f62db409f2c9b0223a3f68567b4a01333aae778",
+          "version": "1.17.0"
         }
       }
     ]
