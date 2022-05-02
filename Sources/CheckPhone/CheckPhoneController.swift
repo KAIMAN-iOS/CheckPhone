@@ -12,6 +12,7 @@ import FontExtension
 import ActionButton
 import ATAConfiguration
 import UIViewControllerExtension
+import TextFieldExtension
 
 public enum CheckCodeError: Error {
     case verificationCodeMissing
@@ -146,6 +147,7 @@ public class CheckPhoneController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         hideBackButtonText = true
+        pinCodeView.addKeyboardControlView(target: view, buttonStyle: .footnote)
         view.backgroundColor = CheckPhoneController.configuration.palette.background
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Check number title".bundleLocale()
