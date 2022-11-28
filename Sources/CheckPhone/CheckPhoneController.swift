@@ -108,8 +108,8 @@ public class CheckPhoneController: UIViewController {
                 self?.resetButtonState()
                 
                 guard error == nil else {
-                    if let authError = error,
-                       let errCode = AuthErrorCode(rawValue: authError._code) {
+                    if let authError = error {
+                        let errCode = AuthErrorCode.Code(rawValue: authError._code) ?? AuthErrorCode.Code.internalError
                         switch errCode {
                         case .invalidVerificationCode: self?.verifyCompletion?(.failure(CheckCodeError.invalidVerificationCode))
                         default: self?.verifyCompletion?(.failure(error!))
@@ -132,6 +132,7 @@ public class CheckPhoneController: UIViewController {
         loader.startAnimating()
         
         PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { [weak self, phoneNumber] (verificationId, error) in
+            print("🤦‍♂️ \(error)")
             self?.verificationId = verificationId
             self?.checkLabel.set(text: String(format: "Check number message format".bundleLocale(), phoneNumber), for: .body, textColor: CheckPhoneController.configuration.palette.mainTexts)
             loader.removeFromSuperview()
